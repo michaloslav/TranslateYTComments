@@ -1,4 +1,4 @@
-const apiKey = "trnsl.1.1.20181014T154414Z.4c9d371bd9b274fa.8ba93ab6094c8bf18ec91a6d9a1d801dba5de577"
+const apiKey = ""
 
 function updateOnOffSwitchUI(){
   if(isOn){
