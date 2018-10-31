@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "TranslateYTComments",
+  "version": "1.0",
+  "description": "Translates YouTube comments (Powered by Yandex.Translate)",
+  "icons": {
+    "16": "TranslateYTComments16.png",
+    "48": "TranslateYTComments48.png",
+    "128": "TranslateYTComments128.png"
+  },
+  "page_action": {
+    "default_title": "TranslateYTComments",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "https://www.youtube.com/",
+    "*://www.youtube.com/",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch?v=*"],
+      "js": ["jquery-3.2.1.min.js", "contentjs.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
